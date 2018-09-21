@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Cookie from 'js-cookie';
 
 export default class Login extends Component {
   constructor(props) {
@@ -27,17 +26,12 @@ export default class Login extends Component {
       }
     })
     .then(res => {
-      if (res.status >= 200 && res.status < 300) {
-        return res.json();
+      if (res.status === 200) {
+        this.props.history.push('/');
       } else {
         const error = new Error(res.error);
         throw error;
       }
-    })
-    .then(res => {
-      const { token } = res;
-      Cookie.set('token', token, { expires: 2 });
-      this.props.history.push('/');
     })
     .catch(err => {
       console.error(err);

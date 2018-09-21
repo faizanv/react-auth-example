@@ -84,11 +84,15 @@ app.post('/api/authenticate', function(req, res) {
           const token = jwt.sign(payload, secret, {
             expiresIn: '2 days'
           });
-          res.json({ token });
+          res.cookie('token', token, { httpOnly: true }).sendStatus(200);
         }
       });
     }
   });
+});
+
+app.get('/checkToken', withAuth, function(req, res) {
+  res.sendStatus(200);
 });
 
 app.listen(process.env.PORT || 8080);

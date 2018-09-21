@@ -7,7 +7,6 @@
     "body-parser": "^1.18.3",
     "cookie-parser": "^1.4.3",
     "express": "^4.16.3",
-    "js-cookie": "^2.2.0",
     "jsonwebtoken": "^8.3.0",
     "mongoose": "^5.2.10",
     "react": "^16.4.2",
