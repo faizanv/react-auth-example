@@ -2,7 +2,14 @@
 
 This is an example application I created to showcase how to implement authentication on a web application using React and react-router on the frontend and node.js, express, mongodb, and mongoose on the backend.
 
-To run the application first install the dependencies
+The [associated blog post](https://medium.com/@faizanv/authentication-for-your-react-and-express-application-w-json-web-tokens-923515826e0) for this example can be found [here](https://medium.com/@faizanv/authentication-for-your-react-and-express-application-w-json-web-tokens-923515826e0).
+
+To run the application first clone the repository
+```
+git clone https://github.com/faizanv/react-auth-example.git
+```
+
+Install the dependencies
 ```
 npm install
 ```
