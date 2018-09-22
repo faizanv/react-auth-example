@@ -82,7 +82,7 @@ app.post('/api/authenticate', function(req, res) {
           // Issue token
           const payload = { email };
           const token = jwt.sign(payload, secret, {
-            expiresIn: '2 days'
+            expiresIn: '1h'
           });
           res.cookie('token', token, { httpOnly: true }).sendStatus(200);
         }
