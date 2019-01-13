@@ -30,17 +30,15 @@ export default function withAuth(ComponentToProtect) {
 
     render() {
       const { loading, redirect } = this.state;
-      let view = <h1>Loading...</h1>
-      if (!loading) {
-        if (redirect) {
-          view = <Redirect to="/login" />
-        } else {
-          view = <ComponentToProtect {...this.props} />
-        }
+      if (loading) {
+        return null;
+      }
+      if (redirect) {
+        return <Redirect to="/login" />;
       }
       return (
         <React.Fragment>
-          { view }
+          <ComponentToProtect {...this.props} />
         </React.Fragment>
       );
     }
