@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 
 const mongo_uri = 'mongodb://localhost/react-auth';
-mongoose.connect(mongo_uri, { useNewUrlParser: true }, function(err) {
+mongoose.connect(mongo_uri, { useNewUrlParser: true, useUnifiedTopology: true }, function(err) {
   if (err) {
     throw err;
   } else {
