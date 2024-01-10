@@ -16,9 +16,9 @@ export default class Login extends Component {
     });
   }
 
-  onSubmit = (event) => {
+  onSubmitHandler = async (event) => {
     event.preventDefault();
-    fetch('/api/authenticate', {
+    await fetch('/api/authenticate', {
       method: 'POST',
       body: JSON.stringify(this.state),
       headers: {
@@ -48,7 +48,7 @@ export default class Login extends Component {
       // background: "#ccc"
     }
     return (
-      <form onSubmit={this.onSubmit} style={loginStyle}>
+      <form onSubmit={this.onSubmitHandler} style={loginStyle}>
         <h1>Login Below!</h1>
         <input style={{padding: "8px 10px", margin: "15px 0px"}}
           type="email"
