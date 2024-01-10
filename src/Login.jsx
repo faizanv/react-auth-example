@@ -16,9 +16,9 @@ export default class Login extends Component {
     });
   }
 
-  onSubmit = (event) => {
+  onSubmitHandler = async (event) => {
     event.preventDefault();
-    fetch('/api/authenticate', {
+    await fetch('/api/authenticate', {
       method: 'POST',
       body: JSON.stringify(this.state),
       headers: {
@@ -40,21 +40,28 @@ export default class Login extends Component {
   }
 
   render() {
+    const loginStyle = {
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center",
+      // background: "#ccc"
+    }
     return (
-      <form onSubmit={this.onSubmit}>
+      <form onSubmit={this.onSubmitHandler} style={loginStyle}>
         <h1>Login Below!</h1>
-        <input
+        <input style={{padding: "8px 10px", margin: "15px 0px"}}
           type="email"
           name="email"
-          placeholder="Enter email"
+          placeholder="Enter Email"
           value={this.state.email}
           onChange={this.handleInputChange}
           required
         />
-        <input
+        <input style={{padding: "8px 10px", margin: "15px 0px"}}
           type="password"
           name="password"
-          placeholder="Enter password"
+          placeholder="Enter Password"
           value={this.state.password}
           onChange={this.handleInputChange}
           required

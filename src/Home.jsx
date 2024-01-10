@@ -16,7 +16,7 @@ export default class Home extends Component {
   
   render() {
     return (
-      <div>
+      <div style={{textAlign: "center"}}>
         <h1>Home</h1>
         <p>{this.state.message}</p>
       </div>
