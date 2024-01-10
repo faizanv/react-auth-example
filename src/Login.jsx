@@ -53,7 +53,7 @@ export default class Login extends Component {
         <input style={{padding: "8px 10px", margin: "15px 0px"}}
           type="email"
           name="email"
-          placeholder="Enter email"
+          placeholder="Enter Email"
           value={this.state.email}
           onChange={this.handleInputChange}
           required
@@ -61,7 +61,7 @@ export default class Login extends Component {
         <input style={{padding: "8px 10px", margin: "15px 0px"}}
           type="password"
           name="password"
-          placeholder="Enter password"
+          placeholder="Enter Password"
           value={this.state.password}
           onChange={this.handleInputChange}
           required
