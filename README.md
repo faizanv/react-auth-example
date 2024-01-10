@@ -6,24 +6,24 @@ The [associated blog post](https://medium.com/@faizanv/authentication-for-your-r
 
 To run the application first clone the repository
 ```
-git clone https://github.com/faizanv/react-auth-example.git
+1. git clone https://github.com/faizanv/react-auth-example.git
 ```
 
-Install the dependencies
+2. Install the dependencies
 ```
-npm install
+3. npm install
 ```
-Make sure that MongoDB is running
+4. Make sure that MongoDB is running
 ```
-mongod
+5. mongod
 ```
-run the server
+6. run the server
 ```
-npm run server
+7. npm run server
 ```
-and then in a separate window/tab run the frontend
+8. and then in a separate window/tab run the frontend
 ```
-npm start
+9. npm start
 ```
 The application should be running at [http://localhost:3000/](http://localhost:3000/)
 
